@@ -1,10 +1,6 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th>Color Name</th>
-    </tr>
-  </thead>
-  <tr *ngFor="let color of colors">
-    <td>{{ color.colorName }}</td>
-  </tr>
-</table>
+<ul class="list-group">
+  <li class="list-group-item list-group-item-dark">Color Name</li>
+  <li *ngFor="let color of colors" class="list-group-item">
+    {{ color.colorName }}
+  </li>
+</ul>

@@ -1,10 +1,6 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th>Company Name</th>
-    </tr>
-  </thead>
-  <tr *ngFor="let customer of customers">
-    <td>{{ customer.companyName }}</td>
-  </tr>
-</table>
+<ul class="list-group">
+  <li class="list-group-item list-group-item-dark">Company Name</li>
+  <li *ngFor="let customer of customers" class="list-group-item">
+    {{ customer.companyName }}
+  </li>
+</ul>
