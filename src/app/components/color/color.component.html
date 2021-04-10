@@ -1,5 +1,7 @@
-<ul class="list-group">
-  <li class="list-group-item list-group-item-dark"><h4>Colors</h4></li>
+<ul style="margin-left: 15%" class="container list-group py-3">
+  <li class="list-group-item text-center list-group-item-dark">
+    <h4>Colors</h4>
+  </li>
   <li routerLink="/cars" [class]="getAllColorClass()">All Colors</li>
   <li
     (click)="setCurrentColor(color)"

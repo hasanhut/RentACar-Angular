@@ -1,42 +1,37 @@
 <div class="card" *ngFor="let carImage of carImages">
   <img
     src="{{ imageUrl }}{{ carImage.imagePath }}"
-    class="img-thumbnail"
+    class="mx-auto cover"
     alt="..."
   />
+  <hr class="mt-2 mx-2" />
   <div class="card-body">
     <h5 class="card-title">
       {{ carDetails[0]?.brandName }}
     </h5>
-    <p class="card-text">RentalCars ayrıcalığı ile kiralayın!</p>
+    <p class="card-text">Renting a car is very easy now.</p>
     <div class="card-body">
       <div class="row">
-        <div class="col-sm-2">
-          <h4 class="card-title" style="text-align: center">Marka</h4>
+        <div class="col-sm-3">
+          <h4 class="card-title" style="text-align: center">Brand</h4>
           <p class="card-text" style="text-align: center">
             {{ carDetails[0]?.brandName }}
           </p>
         </div>
-        <div class="col-sm-2">
-          <h4 class="card-title" style="text-align: center">Model</h4>
+        <div class="col-sm-3">
+          <h4 class="card-title" style="text-align: center">Model Year</h4>
           <p class="card-text" style="text-align: center">
             {{ carDetails[0]?.modelYear }}
           </p>
         </div>
-        <div class="col-sm-2">
-          <h4 class="card-title" style="text-align: center">Araç Rengi</h4>
+        <div class="col-sm-3">
+          <h4 class="card-title" style="text-align: center">Color</h4>
           <p class="card-text" style="text-align: center">
             {{ carDetails[0]?.colorName }}
           </p>
         </div>
         <div class="col-sm-2">
-          <h4 class="card-title" style="text-align: center">Model Yılı</h4>
-          <p class="card-text" style="text-align: center">
-            {{ carDetails[0]?.modelYear }}
-          </p>
-        </div>
-        <div class="col-sm-2">
-          <h4 class="card-title" style="text-align: center">Günlük Fiyat</h4>
+          <h4 class="card-title" style="text-align: center">Daily Price</h4>
           <p class="card-text" style="text-align: center">
             {{ carDetails[0]?.dailyPrice }}
           </p>
@@ -44,7 +39,7 @@
       </div>
     </div>
   </div>
-  <div class="d-grid gap-2">
-    <button class="btn btn-success" type="button">Kirala</button>
+  <div class="d-grid">
+    <button class="btn btn-success" type="button"><h5>Rent</h5></button>
   </div>
 </div>
