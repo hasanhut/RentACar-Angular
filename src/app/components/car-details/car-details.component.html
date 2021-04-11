@@ -1,13 +1,13 @@
-<div class="card" *ngFor="let carImage of carImages">
+<div class="card" *ngFor="let carDetail of carDetails">
   <img
-    src="{{ imageUrl }}{{ carImage.imagePath }}"
+    src="{{ imageUrl }}{{ carDetail.imagePath }}"
     class="mx-auto cover"
     alt="..."
   />
   <hr class="mt-2 mx-2" />
   <div class="card-body">
     <h5 class="card-title">
-      {{ carDetails[0]?.brandName }}
+      {{ carDetail.brandName }}
     </h5>
     <p class="card-text">Renting a car is very easy now.</p>
     <div class="card-body">
@@ -15,25 +15,25 @@
         <div class="col-sm-3">
           <h4 class="card-title" style="text-align: center">Brand</h4>
           <p class="card-text" style="text-align: center">
-            {{ carDetails[0]?.brandName }}
+            {{ carDetail.brandName }}
           </p>
         </div>
         <div class="col-sm-3">
           <h4 class="card-title" style="text-align: center">Model Year</h4>
           <p class="card-text" style="text-align: center">
-            {{ carDetails[0]?.modelYear }}
+            {{ carDetail.modelYear }}
           </p>
         </div>
         <div class="col-sm-3">
           <h4 class="card-title" style="text-align: center">Color</h4>
           <p class="card-text" style="text-align: center">
-            {{ carDetails[0]?.colorName }}
+            {{ carDetail.colorName }}
           </p>
         </div>
         <div class="col-sm-2">
           <h4 class="card-title" style="text-align: center">Daily Price</h4>
           <p class="card-text" style="text-align: center">
-            {{ carDetails[0]?.dailyPrice }}
+            {{ carDetail.dailyPrice }}
           </p>
         </div>
       </div>

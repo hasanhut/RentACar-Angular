@@ -1,14 +1,27 @@
-<ul style="margin-left: 15%" class="container list-group py-3">
-  <li class="list-group-item text-center list-group-item-dark">
-    <h4>Colors</h4>
-  </li>
-  <li routerLink="/cars" [class]="getAllColorClass()">All Colors</li>
-  <li
-    (click)="setCurrentColor(color)"
-    routerLink="/cars/color/{{ color.colorId }}"
-    *ngFor="let color of colors"
-    [class]="getCurrentColorClass(color)"
-  >
-    {{ color.colorName }}
-  </li>
-</ul>
+<div style="margin: 10% 0 0 10%" class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button
+        class="accordion-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseTwo"
+        aria-expanded="true"
+        aria-controls="collapseTwo"
+      >
+        Colors
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse show">
+      <li routerLink="/cars" [class]="getAllColorClass()">All Colors</li>
+      <li
+        (click)="setCurrentColor(color)"
+        routerLink="/cars/color/{{ color.colorId }}"
+        *ngFor="let color of colors"
+        [class]="getCurrentColorClass(color)"
+      >
+        {{ color.colorName }}
+      </li>
+    </div>
+  </div>
+</div>

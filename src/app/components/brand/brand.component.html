@@ -1,14 +1,27 @@
-<ul style="margin-left: 15%" class="container list-group py-3">
-  <li class="list-group-item text-center list-group-item-dark">
-    <h5>Brands</h5>
-  </li>
-  <li routerLink="/cars" [class]="getAllBrandClass()">All Cars</li>
-  <li
-    (click)="setCurrentBrand(brand)"
-    routerLink="/cars/brand/{{ brand.brandId }}"
-    *ngFor="let brand of brands"
-    [class]="getCurrentBrandClass(brand)"
-  >
-    {{ brand.brandName }}
-  </li>
-</ul>
+<div style="margin: 10% 0 0 10%" class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button
+        class="accordion-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseOne"
+        aria-expanded="true"
+        aria-controls="collapseOne"
+      >
+        Brands
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show">
+      <li routerLink="/cars" [class]="getAllBrandClass()">All Cars</li>
+      <li
+        (click)="setCurrentBrand(brand)"
+        routerLink="/cars/brand/{{ brand.brandId }}"
+        *ngFor="let brand of brands"
+        [class]="getCurrentBrandClass(brand)"
+      >
+        {{ brand.brandName }}
+      </li>
+    </div>
+  </div>
+</div>
